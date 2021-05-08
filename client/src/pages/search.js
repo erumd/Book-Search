@@ -89,8 +89,7 @@ class SearchBooks extends Component {
 										</strong>
 									</h1>
 									<h5 className="text-center" style={{color:'white'}}>
-										MERN App to Search and Save
-										Books
+										Search Books
 									</h5>
 								</Jumbotron>
 							</Col>
@@ -123,10 +122,10 @@ class SearchBooks extends Component {
 													<Book
 														key={ book.id }
 														title={	book.volumeInfo.title }
-														subtitle={ book.volumeInfo.subtitle }
+                                                        authors={book.volumeInfo.authors.join(', ')}
+                                                        description={ book.volumeInfo.description }
+														// subtitle={ book.volumeInfo.subtitle }
 														link={ book.volumeInfo.infoLink }
-														authors={book.volumeInfo.authors.join(', ')}
-														description={ book.volumeInfo.description }
 														image={ book.volumeInfo.imageLinks.thumbnail }
 														Button={() => (
 															<button
