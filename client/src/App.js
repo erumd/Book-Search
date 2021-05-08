@@ -1,29 +1,28 @@
-import React from "react";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
-// import Search from './pages/search';
-import Saved from './pages/saved';
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Saved from "./containers/Saved";
+import Search from "./containers/Search";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import { useEffect } from "react";
+// import API from "./utils/API";
+import "./App.css";
+import Jumbotron from "./components/Jumbotron";
+import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
 
-// The app will not render correctly until you setup a Route component.
-// Refer to the Basic Example documentation if you need to.
-// (https://reacttraining.com/react-router/web/example/basic)
+
 function App() {
+  
   return (
-    <BrowserRouter>
-    <div>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Books />} />
-          <Route path="/Books" element={<Books />} />
-          <Route path="/books/:id" element={<Detail />} />
-          <Route path="*" element={<NoMatch />} />
-        </Routes>
+    <div className="App">
+      <Router>
+        <Navbar />
+        <Jumbotron />
+        <Switch>
+          <Route exact path="/saved" component={Saved} />
+          <Route path="/" component={Search} />
+        </Switch>
+        {/* <Footer/> */}
+      </Router>
     </div>
-    </BrowserRouter>
   );
 }
 
