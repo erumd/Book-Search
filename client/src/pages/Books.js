@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
@@ -6,23 +6,27 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
-import { Component } from 'react';
+import { Card, Form  } from 'react-bootstrap';
+import Book from '../components/Book';
+
+// import { Component } from 'react';
 
 
 
-// class Books extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       books: [],
-//       searchField:''
-//     }
-//   }
-// }
+class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      books: [],
+      searchField:''
+    }
+  }
+}
 
 function Books ()  {
   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
+  
 
   // searchBook = () => {
   //   request.get('https://www.googleapis.com/books/v1/volumes?q=search+terms')
@@ -67,77 +71,81 @@ function Books ()  {
   };
 
     return (
-      <Container >
-        {/* <Row> */}
-          <div>
-          <div className="jumbotron text-center">
-            {/* <Jumbotron> */}
-              <h1>Search For A Book 📚</h1>
-            {/* </Jumbotron> */}
-            </div>
-            
-            <form>
-              <Input
-                onChange={handleInputChange}
-                name="title"
-                placeholder="Book Title"
-              />
-              {/* <Input
-                onChange={handleInputChange}
-                name="author"
-                placeholder="Author (required)"
-              /> */}
-              {/* <TextArea
-                onChange={handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
-              /> */}
-              <FormBtn
-                disabled={!(formObject.author && formObject.title)}
-                onClick={handleFormSubmit}
-                styles={{color: "gray"}}
-              >
-                Search
-              </FormBtn>
-            </form>
+      
 
-            <form className="form mt-5" fluid>
-                <input
-                className="form-control w-25 mx-auto"
-                type="search"
-                placeholder="Search for Book"
-                name="search"
-                onChange=""
-                value=""
-                />
-            </form>
-            <br></br>
-          </div>
-          <div >
-            {/* <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron> */}
-            {books.length ? (
-              <List>
-                {books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
-                      <h2>{book.description}</h2>
-                      <dic>{book.thumbnail}</dic>
-                    </Link>
-                    <DeleteBtn onClick={() => deleteBook(book._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </div>
-        {/* </Row> */}
-      </Container>
+      <Container>
+					<div className="main-container">
+						<Row>
+							<Col size="md-12">
+								{/* Jumbotron */}
+								<Jumbotron>
+									<h1 className="text-center">
+										<strong style={{color:'white'}}>
+											Google Books Search
+										</strong>
+									</h1>
+									<h5 className="text-center" style={{color:'white'}}>
+										Search Books
+									</h5>
+								</Jumbotron>
+							</Col>
+							<Col size="md-12">
+								{/* Book Search Form */}
+								<Card
+									title=" Book Search"
+									icon="far fa-book"
+								>
+									{/* <Form
+										handleInputChange={
+											this.handleInputChange
+										}
+										handleFormSubmit={
+											this.handleFormSubmit
+										}
+										q={this.state.q}
+									/> */}
+								</Card>
+							</Col>
+						</Row>
+						<Row>
+							<Col size="md-12">
+							
+								<Card title="Search Results">
+									{this.state.books.length ? (
+										<List>
+											{this.state.books.map(
+												(book) => (
+													<Book
+														key={ book.id }
+														title={	book.volumeInfo.title }
+                                                        authors={book.volumeInfo.authors.join(', ')}
+                                                        description={ book.volumeInfo.description }
+														// subtitle={ book.volumeInfo.subtitle }
+														link={ book.volumeInfo.infoLink }
+														image={ book.volumeInfo.imageLinks.thumbnail }
+														Button={() => (
+															<button
+																onClick={() => this.handleBookSave( book.id )}
+																className="btn btn-primary ml-2" >
+																Save
+															</button>
+														)}
+													/>
+												)
+											)}
+										</List>
+									) : (
+										<h5 className="text-center">
+											{this.state.message}
+										</h5>
+									)}
+								</Card>
+							</Col>
+						</Row>
+						<br />
+					</div>
+					<br />
+				</Container>
     );
   }
 

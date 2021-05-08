@@ -15,12 +15,12 @@ import API from '../utils/API';
 // import './style.css';
 
 // Search Books class component
-class SearchBooks extends Component {
+class Search extends Component {
 	
 	// Components initial state
 	state = {
 		books: [],
-		q: '',
+		title: '',
 		message: 'Search For A Book!',
 	};
 
@@ -61,7 +61,7 @@ class SearchBooks extends Component {
 		const book = this.state.books.find((book) => book.id === id);
 
 		API.saveBook({
-			googleId: book.id,
+			idGoogle: book.id,
 			title: book.volumeInfo.title,
 			subtitle: book.volumeInfo.subtitle,
 			link: book.volumeInfo.infoLink,
@@ -156,4 +156,4 @@ class SearchBooks extends Component {
 	}
 }
 
-export default SearchBooks;
+export default Search;

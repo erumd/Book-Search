@@ -1,6 +1,6 @@
 import React from "react";
 
-// // This file exports the Input, TextArea, and FormBtn components
+// // // This file exports the Input, TextArea, and FormBtn components
 
 export function Input(props) {
   return (
@@ -12,13 +12,13 @@ export function Input(props) {
   );
 }
 
-// export function TextArea(props) {
-//   return (
-//     <div className="form-group">
-//       <textarea className="form-control" rows="20" {...props} />
-//     </div>
-//   );
-// }
+export function TextArea(props) {
+  return (
+    <div className="form-group">
+      <textarea className="form-control" rows="20" {...props} />
+    </div>
+  );
+}
 
 export function FormBtn(props) {
   return (
@@ -29,7 +29,42 @@ export function FormBtn(props) {
 }
 
 
-export function Form ({title, handleInputChange, handleFormSubmit }) {
+// export function Form ({title, handleInputChange, handleFormSubmit }) {
+//   return (
+//     <form>
+//       <div className="form-group">
+//         <label htmlFor="Query">
+//           <strong style = {{fontSize : 'x-large' }}>Book</strong>
+//         </label>
+//         <input
+//           className="form-control"
+//           id="Title"
+//           type="text"
+//           value={title}
+//           placeholder="Search"
+//           name="title"
+//           onChange={handleInputChange}
+//           required
+//         />
+//       </div>
+//       <div className="pull-right">
+//         <button
+//           onClick={handleFormSubmit}
+//           type="submit"
+//           className="btn btn-lg btn-danger float-right"
+//         >
+//           Search
+//         </button>
+//       </div>
+//     </form>
+//   );
+// }
+
+
+
+
+
+export default function Form({ title, handleInputChange, handleFormSubmit }) {
   return (
     <form>
       <div className="form-group">
@@ -41,7 +76,7 @@ export function Form ({title, handleInputChange, handleFormSubmit }) {
           id="Title"
           type="text"
           value={title}
-          placeholder="Search"
+          placeholder="Enter the book you want to search"
           name="title"
           onChange={handleInputChange}
           required
@@ -59,3 +94,5 @@ export function Form ({title, handleInputChange, handleFormSubmit }) {
     </form>
   );
 }
+
+// export default Form;

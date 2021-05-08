@@ -3,7 +3,10 @@ import Books from "./pages/Books";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Search from './pages/search';
+import Saved from './pages/saved';
+import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // The app will not render correctly until you setup a Route component.
 // Refer to the Basic Example documentation if you need to.
@@ -15,7 +18,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Books />} />
-          <Route path="/books" element={<Books />} />
+          <Route path="/Books" element={<Books />} />
           <Route path="/books/:id" element={<Detail />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
