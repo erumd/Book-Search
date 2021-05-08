@@ -1,5 +1,5 @@
 import React from "react";
-import Thumbnail from "../Thumbnail";
+// import Thumbnail from "../Thumbnail";
 import "./style.css";
 
 
@@ -8,7 +8,7 @@ import "./style.css";
 export function List({ children }) {
   return (
     <div className="list-overflow-container">
-       <Thumbnail />
+      
       <ul className="list-group">{children}</ul>
     </div>
   );
@@ -17,3 +17,6 @@ export function List({ children }) {
 export function ListItem({ children }) {
   return <li className="list-group-item">{children}</li>;
 }
+
+
+

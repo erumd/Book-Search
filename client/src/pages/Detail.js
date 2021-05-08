@@ -15,8 +15,8 @@ function Detail() {
   useEffect(() => {
     API.getBook(id)
      
-      .then(res =>  console.log(res))
-      // .then(res =>  console.log(res), setBook(res.data))
+      // .then(res =>  console.log(res))
+      .then(res =>   setBook(res.data))
       .catch(err => console.log(err));
   }, [])
   console.log (API.getBook, "API");
@@ -37,6 +37,7 @@ function Detail() {
               <h1>
                 {book.title} by {book.author}
               </h1>
+              {/* <h2>{book.synopsis}</h2> */}
             </Jumbotron>
           </Col>
         </Row>

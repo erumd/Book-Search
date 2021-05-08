@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import { Component } from 'react';
+
 
 
 // class Books extends Component {
@@ -18,7 +20,7 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 //   }
 // }
 
-function Books() {
+function Books ()  {
   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
 
@@ -73,6 +75,7 @@ function Books() {
               <h1>Search For A Book 📚</h1>
             {/* </Jumbotron> */}
             </div>
+            
             <form>
               <Input
                 onChange={handleInputChange}
@@ -92,6 +95,7 @@ function Books() {
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
+                styles={{color: "gray"}}
               >
                 Search
               </FormBtn>
@@ -121,6 +125,8 @@ function Books() {
                       <strong>
                         {book.title} by {book.author}
                       </strong>
+                      <h2>{book.description}</h2>
+                      <dic>{book.thumbnail}</dic>
                     </Link>
                     <DeleteBtn onClick={() => deleteBook(book._id)} />
                   </ListItem>
