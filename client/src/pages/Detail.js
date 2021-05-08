@@ -14,9 +14,20 @@ function Detail() {
   // from react-router-dom.
   useEffect(() => {
     API.getBook(id)
-      .then(res => setBook(res.data))
+     
+      .then(res =>  console.log(res))
+      // .then(res =>  console.log(res), setBook(res.data))
       .catch(err => console.log(err));
   }, [])
+  console.log (API.getBook, "API");
+
+  // const [books, setBooks] = useState([]);
+  // const [search, setSearch] = useState('');
+  // const searchBooks = (title) => {
+  //   API.searchBook(title)
+  //     .then((res) => setBooks(res.data.items))
+  //     .catch((err) => console.log(err));
+  // };
 
   return (
       <Container fluid>
@@ -35,6 +46,7 @@ function Detail() {
               <h1>Synopsis</h1>
               <p>
                 {book.synopsis}
+
               </p>
             </article>
           </Col>
