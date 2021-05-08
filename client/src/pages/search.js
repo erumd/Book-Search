@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 // Components
 import Jumbotron from '../Components/Jumbotron';
-import Card from '../Components/Card';
+import Card from '../components/Card';
 import Form from '../Components/Form';
-import Book from '../Components/Book';
+import Book from '../components/Book';
 import { Col, Row, Container } from '../Components/Grid';
 import { List } from '../Components/List';
 
@@ -12,7 +12,7 @@ import { List } from '../Components/List';
 import API from '../utils/API';
 
 // Style CSS
-import './style.css';
+// import './style.css';
 
 // Search Books class component
 class SearchBooks extends Component {

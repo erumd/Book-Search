@@ -41,7 +41,7 @@ export function Form ({title, handleInputChange, handleFormSubmit }) {
           id="Title"
           type="text"
           value={title}
-          placeholder="Search Book"
+          placeholder="Search"
           name="title"
           onChange={handleInputChange}
           required
