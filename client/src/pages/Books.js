@@ -7,9 +7,26 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
+
+// class Books extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       books: [],
+//       searchField:''
+//     }
+//   }
+// }
+
 function Books() {
   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
+
+  // searchBook = () => {
+  //   request.get('https://www.googleapis.com/books/v1/volumes?q=search+terms')
+  //   .query({q:this.searchField})
+  //   .then(data) => {}
+  // }
 
   useEffect(() => {
     loadBooks()
@@ -48,40 +65,54 @@ function Books() {
   };
 
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-6">
-            <Jumbotron>
-              <h1>What Books Should I Read?</h1>
-            </Jumbotron>
+      <Container >
+        {/* <Row> */}
+          <div>
+          <div className="jumbotron text-center">
+            {/* <Jumbotron> */}
+              <h1>Search For A Book 📚</h1>
+            {/* </Jumbotron> */}
+            </div>
             <form>
               <Input
                 onChange={handleInputChange}
                 name="title"
-                placeholder="Title (required)"
+                placeholder="Book Title"
               />
-              <Input
+              {/* <Input
                 onChange={handleInputChange}
                 name="author"
                 placeholder="Author (required)"
-              />
-              <TextArea
+              /> */}
+              {/* <TextArea
                 onChange={handleInputChange}
                 name="synopsis"
                 placeholder="Synopsis (Optional)"
-              />
+              /> */}
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
-                Submit Book
+                Search
               </FormBtn>
             </form>
-          </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
+
+            <form className="form mt-5" fluid>
+                <input
+                className="form-control w-25 mx-auto"
+                type="search"
+                placeholder="Search for Book"
+                name="search"
+                onChange=""
+                value=""
+                />
+            </form>
+            <br></br>
+          </div>
+          <div >
+            {/* <Jumbotron>
               <h1>Books On My List</h1>
-            </Jumbotron>
+            </Jumbotron> */}
             {books.length ? (
               <List>
                 {books.map(book => (
@@ -98,8 +129,8 @@ function Books() {
             ) : (
               <h3>No Results to Display</h3>
             )}
-          </Col>
-        </Row>
+          </div>
+        {/* </Row> */}
       </Container>
     );
   }
