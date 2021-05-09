@@ -1,16 +1,15 @@
 import Saved from "./pages/Saved";
 import Search from "./pages/Search";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import { useEffect } from "react";
 // import API from "./utils/API";
-import "./App.css";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
 
 
 function App() {
-  
   return (
     <div className="App">
       <Router>
