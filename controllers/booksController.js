@@ -14,7 +14,7 @@ router.get('/api/books', (req, res) => {
     .catch((err) => console.log(err));
 });
 
-//add new book
+//new book
 router.post('/api/books', (req, res) => {
   const newBook = {
     title: req.body.title,
@@ -29,7 +29,7 @@ router.post('/api/books', (req, res) => {
     })
     .catch((err) => console.log(err));
 });
-// delete book
+
 router.delete('/api/books/:id', (req, res) => {
   db.Books.findByIdAndDelete(req.params.id).then((deleted) => {
     res.json(deleted);
