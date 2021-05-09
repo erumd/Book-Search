@@ -24,8 +24,6 @@ const BookCard = ({ title, authors, image, description, googleLink }) => {
       <div className="row">
         <div className="col-12">
           <h3 className="float">{title}</h3>
-
-          <a href={googleLink} target="_blank" rel="noreferrer"></a>
         </div>
       </div>
       <div className="row">
@@ -40,18 +38,26 @@ const BookCard = ({ title, authors, image, description, googleLink }) => {
         <div className="col-10">
           <p>{description}</p>
         </div>
-        <button type="button" className="btn btn-primary float-right">
-          View
-        </button>
+      </div>
+
+      <div className="col-2">
+        <br></br>
         <button
           type="button"
           onClick={handleSave}
-          className="btn btn-success float-right"
+          className="btn btn-success float-left"
         >
           Save
         </button>
+        <a href={googleLink} target="_blank" rel="noreferrer">
+          <button type="button" className="btn btn-primary float-left">
+            View
+          </button>
+        </a>
       </div>
+      
     </div>
+    
   );
 };
 

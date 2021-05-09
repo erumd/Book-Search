@@ -38,8 +38,7 @@ const Saved = () => {
           <div className="row">
             <div className="col-12">
               <h3>
-                You currently have no saved books. Please search for your
-                favorites and save them.
+                No saved Request
               </h3>
             </div>
           </div>
