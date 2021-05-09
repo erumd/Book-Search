@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {Button} from 'react-bootstrap';
 
 //navbar code
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light " >
-      <span className="navbar-brand">Google Book Search</span>
+    
+    <nav className="navbar navbar-expand-lg navbar-light justify-content-center" style={{backgroundColor: "lavender"}}  >
       <button
         className="navbar-toggler"
         type="button"
@@ -17,19 +18,14 @@ const Navbar = () => {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item ml-auto">
-            <Link className="nav-link" to="/">
-              Search
-            </Link>
-          </li>
-          <li className="nav-item ml-auto">
-            <Link className="nav-link" to="/saved">
-              Saved
-            </Link>
-          </li>
-        </ul>
+
+     
+     
+      <div className="navbar-nav flex" >
+        <div className="navbar-nav ">
+             <Button href="/" variant="info" size="lg">Search</Button>
+            <Button href="/saved" variant="info" size="lg"> Saved </Button>
+        </div>
       </div>
     </nav>
   );

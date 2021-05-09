@@ -18,7 +18,7 @@ const BookCard = ({ title, authors,description, image, googleLink }) => {
       .catch((err) => console.log(err));
   };
   return (
-    <div className="container border" style={{backgroundColor: ""}}>
+    <div className="container border" style={{backgroundColor: "LavenderBlush"}}>
       <p style={{ color: 'navy' }}> 
         <div className="row">
           <div className="col-12">
