@@ -17,9 +17,18 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb+srv://erumdhukka:passwordpassword@cluster0.mvi9l.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/googlebooksearch',
+  { useNewUrlParser: true }
 );
 
+const db = mongoose.connection;
+db.once('open', (_) => {
+  console.log('Database connected:');
+});
+
+db.on('error', (err) => {
+  console.error('connection error:', err);
+});
 // Start the API server
 app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
