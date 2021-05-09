@@ -1,16 +1,10 @@
 import React, { useState, useEffect, Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
-import API from "../utils/API";
-import { Link } from "react-router-dom";
+import { Card } from 'react-bootstrap';
 import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
-import { Card, Form  } from 'react-bootstrap';
+import { List} from "../components/List";
 import Book from '../components/Book';
-
-// import { Component } from 'react';
-
+import API from "../utils/API";
 
 
 class Search extends Component {
@@ -77,7 +71,6 @@ function Books ()  {
 					<div className="main-container">
 						<Row>
 							<Col size="md-12">
-								{/* Jumbotron */}
 								<Jumbotron>
 									<h1 className="text-center">
 										<strong style={{color:'white'}}>
@@ -90,20 +83,10 @@ function Books ()  {
 								</Jumbotron>
 							</Col>
 							<Col size="md-12">
-								{/* Book Search Form */}
 								<Card
 									title=" Book Search"
 									icon="far fa-book"
 								>
-									{/* <Form
-										handleInputChange={
-											this.handleInputChange
-										}
-										handleFormSubmit={
-											this.handleFormSubmit
-										}
-										q={this.state.q}
-									/> */}
 								</Card>
 							</Col>
 						</Row>

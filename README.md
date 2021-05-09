@@ -1,10 +1,8 @@
 # Book-Search
 
-Create a React-based Google Books Search application. Books are display based on user search.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-#Google API Key
-
-AIzaSyBO0q2vyR0bLDo0TkrlPdKkLYdFEeCEspw
+## Description
 
 
-GET https://www.googleapis.com/books/v1/volumes?q=pride+prejudice&download=epub&key=AIzaSyBO0q2vyR0bLDo0TkrlPdKkLYdFEeCEspw
+
