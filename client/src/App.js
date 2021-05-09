@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Jumbotron from "./components/Jumbotron";
 import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Route exact path="/saved" component={Saved} />
           <Route path="/" component={Search} />
         </Switch>
-        {/* <Footer/> */}
+        <Footer/>
       </Router>
     </div>
   );
