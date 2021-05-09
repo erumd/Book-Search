@@ -44,12 +44,12 @@ const BookCard = ({ title, authors,description, image, googleLink }) => {
           <button
             type="button"
             onClick={handleSave}
-            className="btn btn-success float-left"
+            className="btn btn-info float-left"
           >
             Save
           </button>
           <a href={googleLink} target="_blank" rel="noreferrer">
-            <button type="button" className="btn btn-primary float-left">
+            <button type="button" className="btn btn-warning float-left">
               View
             </button>
           </a>

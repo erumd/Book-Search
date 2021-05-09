@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Card from 'react-bootstrap/Card';
 
 const SavedCard = ({ title, authors, image, description, googleLink, id, loadBooks }) => {
   
@@ -12,15 +13,16 @@ const SavedCard = ({ title, authors, image, description, googleLink, id, loadBoo
     }).catch((err) => console.log(err));
   };
   return (
-    <div className="container border">
+    // <Card>
+    <div className="container border"   style={{backgroundColor: "PaleTurquoise",  border: 'solid'}}>
       <div className="row">
         <div className="col-12">
-          <h3 className="float-left">{title}</h3>
+          <h4 className="float-left"> {title}</h4>
           <button type="button" id={id} onClick={handleDelete} className="btn btn-danger float-right">
             Delete
           </button>
           <a href={googleLink} target="_blank" rel="noreferrer">
-            <button type="button" className="btn btn-primary float-right">
+            <button type="button" className="btn btn-warning float-right">
               View
             </button>
           </a>
@@ -28,7 +30,7 @@ const SavedCard = ({ title, authors, image, description, googleLink, id, loadBoo
       </div>
       <div className="row">
         <div className="col-12 text-left">
-          <h6>Written by {authors}</h6>
+          <h6>Author: {authors}</h6>
         </div>
       </div>
       <div className="row">
@@ -40,6 +42,7 @@ const SavedCard = ({ title, authors, image, description, googleLink, id, loadBoo
         </div>
       </div>
     </div>
+    // </Card>
   );
 };
 
