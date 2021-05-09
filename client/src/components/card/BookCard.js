@@ -23,13 +23,13 @@ const BookCard = ({ title, authors, image, description, googleLink }) => {
     <div className="container border">
       <div className="row">
         <div className="col-12">
-          <h3 className="float-left">{title}</h3>
+          <h3 className="float">{title}</h3>
 
           <a href={googleLink} target="_blank" rel="noreferrer"></a>
         </div>
       </div>
       <div className="row">
-        <div className="col-12 text-left">
+        <div className="col-12 text">
           <h5>Author: {authors}</h5>
         </div>
       </div>
