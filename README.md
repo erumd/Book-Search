@@ -15,6 +15,12 @@ This application uses react and Google API to search for book. Users can save bo
 
 
 ## Deployment
+
+https://github.com/erumd/Book-Search 
+
+ https://erumbooksearch.herokuapp.com/ 
+
+
 ![Screenshot](./images/webpage1.png)
 
 ![Screenshot](./images/webpage2.png)
