@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import API from "../utils/API";
 import "bootstrap/dist/css/bootstrap.css";
-import BookCard from "../components/BookCard";
+import BookCard from "../components/card/BookCard";
 
 
 const Search = () => {

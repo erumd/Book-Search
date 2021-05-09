@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import SavedCard from "../components/SavedCard";
+import SavedCard from "../components/SaveButton/SavedCard";
 
 const Saved = () => {
   const [allBooks, setAllBooks] = useState([]);

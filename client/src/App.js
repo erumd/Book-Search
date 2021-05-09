@@ -1,12 +1,12 @@
-import Saved from "./containers/Saved";
-import Search from "./containers/Search";
+import Saved from "./pages/Saved";
+import Search from "./pages/Search";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import { useEffect } from "react";
 // import API from "./utils/API";
 import "./App.css";
-import Jumbotron from "./components/Jumbotron";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Jumbotron from "./components/Jumbotron/Jumbotron";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 
 function App() {
