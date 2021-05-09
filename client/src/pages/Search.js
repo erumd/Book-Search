@@ -5,14 +5,9 @@ import BookCard from "../components/card/BookCard";
 
 
 const Search = () => {
-  const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
-
-  const handleInputChange = (e) => {
-    e.preventDefault();
-    setSearch(e.target.value);
-  };
-
+  const [search, setSearch] = useState("");
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     API.getBooks(search)
@@ -23,6 +18,11 @@ const Search = () => {
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  const handleInputChange = (e) => {
+    e.preventDefault();
+    setSearch(e.target.value);
   };
 
   return (
@@ -68,7 +68,7 @@ const Search = () => {
             image={
               book.volumeInfo.imageLinks
                 ? book.volumeInfo.imageLinks.thumbnail
-                : "https://image.flaticon.com/icons/png/512/130/130304.png"
+                : ""
             }
             googleLink={book.volumeInfo.infoLink}
             key={index}

@@ -5,15 +5,6 @@ const router = express.Router();
 router.get('/', (req, res) => {
 });
 
-//get books
-router.get('/api/books', (req, res) => {
-  db.Books.find({})
-    .then((books) => {
-      res.json(books);
-    })
-    .catch((err) => console.log(err));
-});
-
 //new book
 router.post('/api/books', (req, res) => {
   const newBook = {
@@ -29,6 +20,17 @@ router.post('/api/books', (req, res) => {
     })
     .catch((err) => console.log(err));
 });
+
+//get books
+router.get('/api/books', (req, res) => {
+  db.Books.find({})
+    .then((books) => {
+      res.json(books);
+    })
+    .catch((err) => console.log(err));
+});
+
+
 
 router.delete('/api/books/:id', (req, res) => {
   db.Books.findByIdAndDelete(req.params.id).then((deleted) => {

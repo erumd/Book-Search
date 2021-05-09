@@ -1,7 +1,8 @@
 {
   "name": "Book-Search",
+  "homepage": "https://github.com/erumd/Book-Search#readme",
   "version": "1.0.0",
-  "description": "",
+  "description": "This application lets you search for ",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -12,6 +13,10 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erumd/Book-Search.git"
   },
   "author": "Erum",
   "license": "ISC",
@@ -26,6 +31,19 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
     "react-bootstrap": "^1.5.2",
+    "react-dom": "^17.0.2",
     "react-router": "^5.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
