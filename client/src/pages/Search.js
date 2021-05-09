@@ -32,7 +32,6 @@ const Search = () => {
         <form>
           <div className="form-group row">
             <label htmlFor="inputSearch" className=" col-form-label">
-              Search:
             </label>
             <div className="col-sm-10">
               <input
@@ -49,7 +48,7 @@ const Search = () => {
                 type="submit"
                 className="btn btn-primary mt-2"
               >
-                Search
+                Search for Book
               </button>
             </div>
           </div>
@@ -64,7 +63,7 @@ const Search = () => {
             description={
               book.volumeInfo.description
                 ? book.volumeInfo.description
-                : "This book does not contain a description. If you would like to learn more, please click on the view button to navigate to the Google Books website page for this book."
+                : "No Desciption. Click View"
             }
             image={
               book.volumeInfo.imageLinks
@@ -79,7 +78,7 @@ const Search = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h3>This search contains no results. Please try again.</h3>
+              <h3>No results</h3>
             </div>
           </div>
         </div>
