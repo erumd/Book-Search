@@ -17,7 +17,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/reactreadinglist'
+  process.env.MONGODB_URI || 'mongodb+srv://erumdhukka:passwoed@cluster0.mvi9l.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 );
 
 // Start the API server
