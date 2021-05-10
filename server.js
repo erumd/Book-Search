@@ -16,10 +16,17 @@ if (process.env.NODE_ENV === 'production') {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost:27017/googlebooksearch',
-  { useNewUrlParser: true }
-);
+// mongoose.connect(
+//   process.env.MONGODB_URI || 'mongodb://localhost:27017/googlebooksearch',
+//   { useNewUrlParser: true }
+// );
+
+// Tony Helped
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/googlebooksearch', {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useFindAndModify: false,
+});
 
 const db = mongoose.connection;
 db.once('open', (_) => {

@@ -6,7 +6,6 @@ import { List} from "../components/List";
 import Book from '../components/Book';
 import API from "../utils/API";
 
-
 class Search extends Component {
   constructor(props) {
     super(props);
@@ -21,12 +20,6 @@ function Books ()  {
   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
   
-
-  // searchBook = () => {
-  //   request.get('https://www.googleapis.com/books/v1/volumes?q=search+terms')
-  //   .query({q:this.searchField})
-  //   .then(data) => {}
-  // }
 
   useEffect(() => {
     loadBooks()

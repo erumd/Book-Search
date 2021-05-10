@@ -1,7 +1,8 @@
 import { React, useState } from "react";
+import BookCard from "../components/card/BookCard";
 import API from "../utils/API";
 import "bootstrap/dist/css/bootstrap.css";
-import BookCard from "../components/card/BookCard";
+
 
 
 const Search = () => {
@@ -27,7 +28,8 @@ const Search = () => {
 
   return (
     <div className="row">
-      <div className="col-3"></div>
+        <div className="col-3">
+        </div>
       <div className="col-6">
         <form>
           <div className="form-group row">
@@ -58,12 +60,13 @@ const Search = () => {
       {results ? (
         results.map((book, index) => (
           <BookCard
+          // Google API
             title={book.volumeInfo.title}
             authors={book.volumeInfo.authors}
             description={
               book.volumeInfo.description
                 ? book.volumeInfo.description
-                : "No Desciption. Click View"
+                : "No Desciption. Click View Button"
             }
             image={
               book.volumeInfo.imageLinks

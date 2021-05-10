@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="navbar-nav flex" >
         <div className="navbar-nav ">
              <Button href="/" variant="info" size="lg">Search</Button>
-            <Button href="/saved" variant="info" size="lg"> Saved </Button>
+            <Button as={Link} to='/saved' variant="info" size="lg"> Saved </Button>
         </div>
       </div>
     </nav>
