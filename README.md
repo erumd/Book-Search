@@ -3,7 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-This application uses react and Google API to search for book. Users can save books to their list come back to view and delete. 
+
+This application uses react and Google API to search for book. Users can save books to their list come back to view and delete.
 
 ## Table of Contents
 
@@ -13,13 +14,11 @@ This application uses react and Google API to search for book. Users can save bo
 - [Resources](#resources)
 - [License](#license)
 
-
 ## Deployment
 
-https://github.com/erumd/Book-Search 
+https://github.com/erumd/Book-Search
 
- https://erumbooksearch.herokuapp.com/ 
-
+https://erumbooksearch.herokuapp.com/
 
 ![Screenshot](./images/webpage1.png)
 
@@ -37,10 +36,7 @@ or email me erumdhukka531@gmail.com.
 
 ## Resources
 
-https://www.youtube.com/watch?v=kL3H-wTWPSQ&t=1211s&ab_channel=Congar-Programming
-
-https://www.youtube.com/watch?v=6sBqMyUOcl8&ab_channel=JasonRivera
-
+This was a hard assignment to complete. I read up on lots of resources online and watched videos to guide me. Here are some that really helped [Congar-Programming](https://www.youtube.com/watch?v=kL3H-wTWPSQ&t=1211s&ab_channel=Congar-Programming) and [Jason Riveria] (https://www.youtube.com/watch?v=6sBqMyUOcl8&ab_channel=JasonRivera)
 
 ## License
 
