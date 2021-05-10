@@ -36,7 +36,7 @@ or email me erumdhukka531@gmail.com.
 
 ## Resources
 
-This was a hard assignment to complete. I read up on lots of resources online and watched videos to guide me. Here are some that really helped [Congar-Programming](https://www.youtube.com/watch?v=kL3H-wTWPSQ&t=1211s&ab_channel=Congar-Programming) and [Jason Riveria] (https://www.youtube.com/watch?v=6sBqMyUOcl8&ab_channel=JasonRivera)
+This was a hard assignment to complete. I read up on lots of resources online and watched videos to guide me. Here are some that really helped [Congar-Programming](https://www.youtube.com/watch?v=kL3H-wTWPSQ&t=1211s&ab_channel=Congar-Programming) and [Jason Riveria](https://www.youtube.com/watch?v=6sBqMyUOcl8&ab_channel=JasonRivera)
 
 ## License
 
