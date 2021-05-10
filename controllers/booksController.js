@@ -2,8 +2,7 @@ const express = require('express');
 const db = require('../models');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-});
+router.get('/', (req, res) => {});
 
 //new book
 router.post('/api/books', (req, res) => {
@@ -30,7 +29,13 @@ router.get('/api/books', (req, res) => {
     .catch((err) => console.log(err));
 });
 
-
+// router.get('/api/saved', (req, res) => {
+//   db.Books.find({})
+//     .then((books) => {
+//       res.json(books);
+//     })
+//     .catch((err) => console.log(err));
+// });
 
 router.delete('/api/books/:id', (req, res) => {
   db.Books.findByIdAndDelete(req.params.id).then((deleted) => {
