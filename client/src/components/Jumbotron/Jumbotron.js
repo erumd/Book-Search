@@ -4,9 +4,7 @@ const Jumbotron = () => {
   return (
     <div className="jumbotron jumbotron-fluid" style={{backgroundColor: "lavender"}}>
       <div className="container" >
-        <h1 className="display-4 text-center"> Book Search</h1>
-        {/* <p className="lead text-center">
-        </p> */}
+        <h1 className="text-center"> Book Search</h1>
       </div>
     </div>
   );

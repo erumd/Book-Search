@@ -1,20 +1,17 @@
-import { React, useState } from "react";
-import BookCard from "../components/card/BookCard";
-import API from "../utils/API";
-import "bootstrap/dist/css/bootstrap.css";
-
-
+import { React, useState } from 'react';
+import Book from '../components/card/Book';
+import API from '../utils/API';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Search = () => {
   const [results, setResults] = useState([]);
-  const [search, setSearch] = useState("");
-  
+  const [search, setSearch] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
     API.getBooks(search)
       .then((response) => {
         setResults(response.data.items);
-        
       })
       .catch((err) => {
         console.log(err);
@@ -28,13 +25,11 @@ const Search = () => {
 
   return (
     <div className="row">
-        <div className="col-3">
-        </div>
+      <div className="col-3"></div>
       <div className="col-6">
         <form>
           <div className="form-group row">
-            <label htmlFor="inputSearch" className=" col-form-label">
-            </label>
+            <label htmlFor="inputSearch" className=" col-form-label"></label>
             <div className="col-sm-10">
               <input
                 type="search"
@@ -59,19 +54,19 @@ const Search = () => {
       <div className="col-3"></div>
       {results ? (
         results.map((book, index) => (
-          <BookCard
-          // Google API
+          <Book
+            // Google API
             title={book.volumeInfo.title}
             authors={book.volumeInfo.authors}
             description={
               book.volumeInfo.description
                 ? book.volumeInfo.description
-                : "No Desciption. Click View Button"
+                : 'No Desciption. Click View Button'
             }
             image={
               book.volumeInfo.imageLinks
                 ? book.volumeInfo.imageLinks.thumbnail
-                : ""
+                : ''
             }
             googleLink={book.volumeInfo.infoLink}
             key={index}

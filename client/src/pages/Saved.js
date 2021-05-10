@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import SavedCard from "../components/SaveButton/SavedCard";
+import SavedBook from "../components/SaveBook/SavedBook";
 
 const Saved = () => {
   const [allBooks, setAllBooks] = useState([]);
@@ -24,7 +24,7 @@ const Saved = () => {
       <div className="col-3"></div>
       {allBooks ? (
         allBooks.map((book) => (
-          <SavedCard
+          <SavedBook
             title={book.title}
             authors={book.authors}
             description={book.description}

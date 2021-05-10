@@ -1,15 +1,15 @@
 import React from "react";
 import axios from "axios";
-import Card from 'react-bootstrap/Card';
+// import Card from 'react-bootstrap/Card';
 
-const SavedCard = ({ title, authors, image, description, googleLink, id, loadBooks }) => {
+const SavedBook = ({ title, authors, description, image, googleLink, id, compile }) => {
   
 
   const handleDelete = (e) => {
       console.log(e.target)
     axios.delete(`api/books/${e.target.id}`).then((res) => {
       console.log(res);
-      loadBooks();
+      compile();
     }).catch((err) => console.log(err));
   };
   return (
@@ -46,4 +46,4 @@ const SavedCard = ({ title, authors, image, description, googleLink, id, loadBoo
   );
 };
 
-export default SavedCard;
+export default SavedBook;
