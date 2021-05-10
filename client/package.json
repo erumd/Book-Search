@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "Book-Search",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
@@ -21,6 +21,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erumd/Book-Search.git"
   },
   "eslintConfig": {
     "extends": [
