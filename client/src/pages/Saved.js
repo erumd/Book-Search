@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
+import React, { useState, useEffect } from "react";
 import SavedCard from "../components/SaveButton/SavedCard";
 
 const Saved = () => {
@@ -11,14 +11,16 @@ const Saved = () => {
 
   const loadBooks = () => {
     axios.get("/api/books").then((response) => {
-      // console.log(response.data);
       setAllBooks(response.data);
     });
   };
 
+ 
+
   return (
-    <div>
-      <h1>Saved Books</h1>
+    <div styles= {{textAlign: "center"}}>
+
+      <h1 >Saved Books</h1>
       <div className="col-3"></div>
       {allBooks ? (
         allBooks.map((book) => (
