@@ -1,17 +1,18 @@
+//  used YouTube resources
 import { React, useState } from 'react';
 import Book from '../components/card/Book';
 import API from '../utils/API';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const Search = () => {
-  const [results, setResults] = useState([]);
+  const [searchResults, setsearchResults] = useState([]);
   const [search, setSearch] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     API.getBooks(search)
       .then((response) => {
-        setResults(response.data.items);
+        setsearchResults(response.data.items);
       })
       .catch((err) => {
         console.log(err);
@@ -27,7 +28,7 @@ const Search = () => {
     <div className="row">
       <div className="col-3"></div>
       <div className="col-6">
-        <form>
+        <form className="form mt-5">
           <div className="form-group row">
             <label htmlFor="inputSearch" className=" col-form-label"></label>
             <div className="col-sm-10">
@@ -51,11 +52,12 @@ const Search = () => {
           </div>
         </form>
       </div>
-      <div className="col-3"></div>
-      {results ? (
-        results.map((book, index) => (
+      <div className="col-3 mt-5"></div>
+      {searchResults ? (
+        searchResults.map((book, index) => (
           <Book
-            // Google API
+            // Google API. Got help from Youtube resources. I was getting errors.
+            // Terinary 
             title={book.volumeInfo.title}
             authors={book.volumeInfo.authors}
             description={
@@ -73,11 +75,10 @@ const Search = () => {
           />
         ))
       ) : (
+        //git help from Youtube resources
         <div className="container">
           <div className="row">
-            <div className="col-12">
-              <h3>No results</h3>
-            </div>
+            <h3>No results</h3>
           </div>
         </div>
       )}

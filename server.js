@@ -24,8 +24,8 @@ app.use(routes);
 // Tony Helped
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/googlebooksearch', {
   useUnifiedTopology: true,
-  useNewUrlParser: true,
   useFindAndModify: false,
+  useNewUrlParser: true,
 });
 
 const db = mongoose.connection;
